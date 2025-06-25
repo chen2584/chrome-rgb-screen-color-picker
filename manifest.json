@@ -1,12 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "RGB Screen Color Picker",
+  "name": "Screen HEX Color Picker",
   "version": "1.0",
-  "description": "A lightweight easy RGB screen color picker extension for Chrome.",
-  "permissions": [
-    "activeTab",
-    "scripting"
-  ],
+  "description": "A lightweight easy screen hex color picker extension for Chrome.",
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
