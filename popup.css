@@ -24,12 +24,13 @@ body {
 .controls {
   display: flex;
   width: 100%;
+  align-items: center;
 }
 
 .input-wrapper {
   position: relative;
   display: flex;
-  width: 100%;
+  flex-grow: 1;
 }
 
 .hex-input {
@@ -71,4 +72,34 @@ body {
 
 .eyedropper-btn:hover svg {
   fill: #555;
+}
+
+.copy-wrapper {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.copy-btn {
+  width: 100%;
+  height: 40px;
+  padding: 0 15px;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0; /* Changed border color to a light gray */
+  background-color: #ffffff;
+  color: #757575;
+  font-size: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.copy-btn:hover {
+  background-color: #f0f0f0;
+  color: #555;
+}
+
+.copy-btn:disabled {
+  background-color: #f9f9f9;
+  color: #bdbdbd;
+  cursor: not-allowed;
+  border-color: #f0f0f0;
 }
