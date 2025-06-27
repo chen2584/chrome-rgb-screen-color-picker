@@ -13,6 +13,7 @@ body {
 
 .color-display {
   width: 100%;
+  gap: 10px; /* Space between flex items */
   height: 100px;
   border-radius: 8px;
   margin-bottom: 15px;
@@ -25,27 +26,39 @@ body {
   width: 100%;
 }
 
+.input-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
 .hex-input {
   flex-grow: 1;
   height: 40px;
-  padding: 0 10px;
+  padding: 0 40px 0 10px; /* Add padding to the right for the button */
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 16px;
   text-transform: uppercase;
+  box-sizing: border-box;
+  outline: none;
 }
 
 .eyedropper-btn {
-  width: 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
   height: 40px;
-  margin-left: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  background-color: #ffffff;
+  width: 40px;
+  background-color: #EEEEEE;
+  color: white;
+  border: none;
   cursor: pointer;
+  border-radius: 0 8px 8px 0; /* Rounded corners only on the right */
+  font-size: 16px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .eyedropper-btn:hover {
