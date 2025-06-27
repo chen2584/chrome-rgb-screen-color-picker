@@ -84,7 +84,7 @@ body {
   height: 40px;
   padding: 0 15px;
   border-radius: 8px;
-  border: 1px solid #d0d0d0; /* Changed border color to a light gray */
+  border: 1px solid #d0d0d0;
   background-color: #ffffff;
   color: #757575;
   font-size: 16px;
@@ -102,4 +102,33 @@ body {
   color: #bdbdbd;
   cursor: not-allowed;
   border-color: #f0f0f0;
+}
+
+.recents-wrapper {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.recent-colors {
+  display: flex;
+  gap: 5px;
+  overflow-x: hidden; /* Hide scrollbar */
+  flex-wrap: nowrap; /* Ensure items stay on one line */
+  justify-content: flex-start;
+  padding-bottom: 5px; /* Add some padding for potential scrollbar space */
+}
+
+.recent-color-box {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.recent-color-box:hover {
+  border-color: #b0b0b0;
+  transform: scale(1.05);
+  transition: all 0.1s ease-in-out;
 }
