@@ -3,6 +3,7 @@ const hexInput = document.getElementById('hex-input');
 const eyedropperBtn = document.getElementById('eyedropper-btn');
 const copyBtn = document.getElementById('copy-btn');
 const recentColorsContainer = document.getElementById('recent-colors');
+const recentsHeader = document.getElementById('recents-header');
 
 const MAX_RECENT_COLORS = 6;
 let recentColors = [];
@@ -43,16 +44,21 @@ function addRecentColor(hex) {
 
 function renderRecentColors() {
   recentColorsContainer.innerHTML = '';
-  recentColors.forEach(hex => {
-    const colorBox = document.createElement('div');
-    colorBox.classList.add('recent-color-box');
-    colorBox.style.backgroundColor = hex;
-    colorBox.title = hex;
-    colorBox.addEventListener('click', () => {
-      setMainColor(hex); // Only set the main color, do not update recents
+  if (recentColors.length > 0) {
+    recentsHeader.style.display = 'block';
+    recentColors.forEach(hex => {
+      const colorBox = document.createElement('div');
+      colorBox.classList.add('recent-color-box');
+      colorBox.style.backgroundColor = hex;
+      colorBox.title = hex;
+      colorBox.addEventListener('click', () => {
+        setMainColor(hex); // Only set the main color, do not update recents
+      });
+      recentColorsContainer.appendChild(colorBox);
     });
-    recentColorsContainer.appendChild(colorBox);
-  });
+  } else {
+    recentsHeader.style.display = 'none';
+  }
 }
 
 hexInput.addEventListener('input', () => {
